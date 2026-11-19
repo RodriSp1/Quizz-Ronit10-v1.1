@@ -1,0 +1,218 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'JetBrains Mono', monospace;
+  background-color: #0a0a0a;
+  color: #f0f0f0;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2vh 4vw;
+}
+
+.caja {
+  background-color: #141414;
+  border: 1px solid #2e2e2e;
+  border-radius: 5px;
+  width: 100%;
+  max-width: 760px;
+  padding: clamp(1.5rem, 3.5vw, 2.8rem);
+}
+
+.header-box {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 1.8rem;
+  padding-bottom: 1.2rem;
+  border-bottom: 1px solid #2e2e2e;
+}
+
+.logo-box {
+  width: 52px;
+  height: 52px;
+  background-color: #0a0a0a;
+  border: 1px solid #1e7a0d;
+  border-radius: 4px;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.logo-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+h1 {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-weight: 800;
+  font-size: clamp(2rem, 4vw, 2.7rem);
+  letter-spacing: 1.5px;
+  color: #39ff14;
+  text-transform: uppercase;
+  line-height: 1;
+}
+
+#progreso {
+  color: #8a8a8a;
+  font-size: clamp(0.9rem, 1.8vw, 1.05rem);
+  text-transform: uppercase;
+  margin-bottom: 0.7rem;
+}
+
+#pregunta {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-weight: 700;
+  font-size: clamp(1.6rem, 3.2vw, 2.2rem);
+  letter-spacing: 0.5px;
+  color: #f0f0f0;
+  margin-bottom: 1.5rem;
+  line-height: 1.2;
+}
+
+#opciones {
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+  margin-bottom: 1.4rem;
+}
+
+#opciones button {
+  display: block;
+  width: 100%;
+  text-align: left;
+  padding: 1.1rem 1.3rem;
+  border: 1px solid #2e2e2e;
+  border-left: 4px solid #2e2e2e;
+  border-radius: 4px;
+  background-color: #0a0a0a;
+  color: #f0f0f0;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: clamp(1rem, 2vw, 1.2rem);
+  cursor: pointer;
+  transition: background-color 0.15s ease, border-color 0.15s ease, color 0.15s ease;
+}
+
+#opciones button:hover:not(:disabled) {
+  background-color: #1c1c1c;
+  border-color: #39ff14;
+  border-left-color: #39ff14;
+  color: #39ff14;
+}
+
+#opciones button:disabled {
+  cursor: default;
+}
+
+#opciones button.correcta {
+  background-color: #11240e;
+  border-color: #39ff14;
+  border-left-color: #39ff14;
+  color: #39ff14;
+  font-weight: 700;
+}
+
+#opciones button.incorrecta {
+  background-color: #211212;
+  border-color: #8a3a3a;
+  border-left-color: #8a3a3a;
+  color: #d48a8a;
+}
+
+#siguiente, #reiniciar {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 1.05rem 1.8rem;
+  border: 1px solid #39ff14;
+  border-radius: 4px;
+  background-color: #39ff14;
+  color: #0a0a0a;
+  font-family: 'JetBrains Mono', monospace;
+  font-weight: 700;
+  font-size: clamp(1rem, 2vw, 1.15rem);
+  text-transform: uppercase;
+  cursor: pointer;
+  margin-top: 0.5rem;
+  transition: background-color 0.15s ease, border-color 0.15s ease;
+}
+
+#siguiente[hidden], #final[hidden], #quiz[hidden] {
+  display: none;
+}
+
+#siguiente:hover, #reiniciar:hover {
+  background-color: #2ce60b;
+  border-color: #2ce60b;
+}
+
+#final {
+  background-color: #0a0a0a;
+  border: 1px solid #2e2e2e;
+  border-left: 4px solid #39ff14;
+  border-radius: 4px;
+  padding: clamp(1.6rem, 3vw, 2.5rem);
+  text-align: center;
+}
+
+#final h2 {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-weight: 800;
+  font-size: clamp(2rem, 4vw, 2.8rem);
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: #39ff14;
+  margin-bottom: 0.8rem;
+}
+
+#puntaje {
+  font-size: clamp(1.3rem, 2.8vw, 1.8rem);
+  font-weight: 700;
+  color: #f0f0f0;
+  margin-bottom: 1.6rem;
+}
+
+.footer-info {
+  margin-top: 2rem;
+  padding-top: 1.3rem;
+  border-top: 1px solid #2e2e2e;
+  text-align: left;
+  font-size: 0.9rem;
+  color: #8a8a8a;
+  line-height: 1.7;
+}
+
+.footer-info strong {
+  color: #f0f0f0;
+  font-weight: 700;
+}
+
+.author {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 1.3rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  color: #f0f0f0;
+  text-transform: uppercase;
+}
+
+.author strong {
+  color: #39ff14;
+}
+
+.social a {
+  color: #39ff14;
+  text-decoration: none;
+}
+
+.social a:hover {
+  text-decoration: underline;
+}

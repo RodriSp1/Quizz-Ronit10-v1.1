@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quiz Ben 10</title>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700;800&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="caja">
+    <header class="header-box">
+      <div class="logo-box">
+        <img src="logo.png" alt="Logo B10">
+      </div>
+      <h1>Quiz Ben 10</h1>
+    </header>
+
+    <div id="quiz">
+      <p id="progreso"></p>
+      <h2 id="pregunta"></h2>
+      <div id="opciones"></div>
+      <button id="siguiente" hidden></button>
+    </div>
+
+    <div id="final" hidden>
+      <h2>Terminaste</h2>
+      <p id="puntaje"></p>
+      <button id="reiniciar"><i class="fa-solid fa-rotate-right"></i> Intentar de nuevo</button>
+    </div>
+
+    <footer class="footer-info">
+      <p class="author"><strong>Creador:</strong> Rodrigo Santini</p>
+      <p class="career">Estudiante de Ingeniería de Software</p>
+      <p class="social">
+        <strong>Instagram:</strong> 
+        <a href="https://instagram.com/ronits.ss" target="_blank" rel="noopener noreferrer">@ronits.ss</a>
+      </p>
+    </footer>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
